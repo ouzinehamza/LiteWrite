@@ -1,0 +1,69 @@
+@import 'src/styles/index';
+
+.articlesHero {
+  background-image: url('/src/assets/images/hero_bg.png');
+  background-size: cover;
+}
+
+.container--articlesHero {
+  @extend .container;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+
+    @include media($mobile) {
+      font-size: 30px;
+    }
+  }
+
+  span {
+    color: $primary;
+  }
+}
+
+.articlesPageList {
+  margin: 60px auto;
+}
+
+.articlesListSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 44px;
+
+  p,
+  label {
+    font-weight: bold;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  select {
+    background: transparent;
+    border: none;
+    font-family: $serif;
+    color: $primary;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.container--articlesPageList {
+  @extend .container;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
