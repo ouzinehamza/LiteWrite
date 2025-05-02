@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
         $featuredTag = Tag::factory()->create(['name' => 'Featured']);
 
         User::factory()
-            ->set('name', 'Francisco')
-            ->set('email', 'francisco@internetbrands.com')
+            ->set('name', 'Samuel')
+            ->set('email', 'ogboyesam@gmail.com')
             ->set('password', 'test1234')
             ->has(Subscription::factory(1))
             ->has(
