@@ -1,12 +1,6 @@
 # litewrite 2024
 
-Welcome to the litewrite 2024, cohort #4!
-
-If you are seeing this for the first time, please visit [this link](https://supreme-gold-b6b.notion.site/Setting-up-Docker-e095fa4f176d4435919ef1c82f80e03e) containing detailed instructions how to set up this project.
-
-Here is some useful info to get you started.
-
----
+Welcome to the litewrite Web App
 
 ## Easy way to run the whole project
 
