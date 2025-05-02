@@ -1,34 +1,115 @@
-# litewrite 2024
 
-Welcome to the litewrite Web App
+# LiteWrite - Blogging Platform
 
-## Easy way to run the whole project
+LiteWrite is a modern blogging platform built with a powerful stack, allowing users to manage their blog posts, subscribe to premium content, and interact with comments. Whether you're a free user or a premium user, LiteWrite provides an intuitive experience for creating, editing, and viewing posts.
+
+## Features
+
+-   **Blog Post Management:**
+    
+    -   Create, Edit, and Delete blog posts.
+        
+    -   Save blog posts as drafts.
+        
+    -   Publish and unpublish posts.
+        
+-   **Premium Content Access:**
+    
+    -   Premium users can view full premium posts.
+        
+    -   Free users can only view snippets of premium posts.
+        
+-   **Commenting System:**
+    
+    -   Create, Edit, and Delete your own comments on any post.
+        
+-   **User Management:**
+    
+    -   Users can subscribe to a premium plan for additional features.
+        
+
+## Tech Stack
+
+-   **Frontend:** React, TanStack (React Query), Tailwind CSS
+    
+-   **Backend:** PHP Laravel Sail
+    
+-   **Database:** MySQL
+    
+-   **Containerization:** Docker
+    
+
+## Getting Started
+
+### Prerequisites
+
+-   Docker and Docker Compose installed on your machine.
+    
+-   Node.js and npm for the frontend.
+    
+-   Composer for PHP dependencies (Laravel Sail uses Composer).
+    
+
+### Installation
+
+#### 1. Clone the repository:
+
+bash
+
+CopyEdit
+
+`git clone https://github.com/your-username/litewrite.git cd litewrite` 
+
+#### 2. Run all the applciations:
 
 ```bash
-make run
+   make run 
 ```
+This will start the Docker containers, including the frontend application, MySQL database and the PHP Laravel server.
 
-## Verify that backend is running
+#### 3. Migrate the database:
 
-After running the project, issue the following command:
+Make sure your database is set up correctly by running the migrations:
 
 ```bash
-curl -H 'Accept: application/json' localhost:8000/api/version
+docker-compose exec app sail artisan migrate
 ```
 
-## Verify that frontend is running
+#### 5. Access the application:
 
-After running the project, visit [http://localhost](http://localhost) in a browser of your choice.
+-   **Frontend:** Open your browser and navigate to `http://localhost:5173`.
+    
+-   **Backend:** The backend API is available at `http://localhost:8000`.
+    
 
-## Dependency changes in frontend
+### Environment Configuration
 
-When new packages are installed, you'll need to run first 
+You can configure the environment variables in the `.env` file in both the frontend and backend directories. Make sure to set up your database credentials, mail server, and any other necessary environment variables.
 
-```bash
-make rebuild-frontend
-```
-and then
+## Usage
 
-```bash
-make run
-```
+-   **Free Users:** Can create, view, and comment on posts. They can only see snippets of premium posts.
+    
+-   **Premium Users:** Can access full premium posts and enjoy other premium benefits.
+    
+-   **Admins:** Can manage posts, comments, and user subscriptions.
+    
+
+## Contributing
+
+1.  Fork the repository.
+    
+2.  Clone your fork.
+    
+3.  Create a new branch (`git checkout -b feature-branch`).
+    
+4.  Commit your changes (`git commit -am 'Add new feature'`).
+    
+5.  Push to the branch (`git push origin feature-branch`).
+    
+6.  Open a pull request.
+    
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
